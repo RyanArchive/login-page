@@ -20,6 +20,7 @@ Web Systems and Technologies | 03 Hands-on Activity 1 - ARG
 
 - HTML
 - CSS
+- JavaScript
 - Any text editor (e.g. VS Code, Sublime)
 
 ### Resources
