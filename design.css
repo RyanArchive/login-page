@@ -1,11 +1,11 @@
 
 /* Color */
 
-:root {
+/* :root {
 	--dark-cyan-blue: #0B2343;
 	--gray: #808080;
 	--light-brown: #F4DCBC;
-	--white: #FFFFFF;
+	--white: var(--white)FFF;
 }
 
 * {
@@ -22,24 +22,11 @@ body {
 	background-color: var(--light-brown);
 	color: #373D48;
 	overflow-x: hidden;
-}
-
-/* Header */
-
-.header {
-	height: 70px;
-}
-
-.center-container {
-	background-color: red;
-	height: 100%;
-	margin: auto;
-	max-width: 1100px;
-}
+} */
 
 /* Login */
 
-.login-container {
+/* .login-container {
 	background-color: var(--dark-cyan-blue);
 	border-radius: 24px;
 	left: 50%;
@@ -106,6 +93,10 @@ input {
 	width: 100%;
 }
 
+input[type="password"] {
+	padding-right: 20px;
+}
+
 .icon {
 	color: var(--white);
 	left: 25px;
@@ -132,94 +123,268 @@ button {
 	flex-direction: row;
 }
 
-p:nth-child(1) {
+.bottom p:nth-child(1) {
 	color: var(--gray);
 	cursor: pointer;
 	font-size: 15px;
 	width: 50%;
 }
 
-p:nth-child(2) {
+.bottom p:nth-child(2) {
 	color: var(--white);
 	cursor: pointer;
 	font-size: 15px;
 	text-align: right;
 	width: 50%;
+} */
+
+
+
+
+
+
+/* colors */
+
+:root {
+	--dark-cyan-blue: #0B2343;
+	--gray: #808080;
+	--light-brown: #F4DCBC;
+	--light-cyan: F3FAFD;
+	--white: #FFFFFF;
 }
 
+* {
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	margin: 0;
+}
 
+html {
+	height: 100%;
+	width: 100%;
+}
 
+body {
+	background-color: var(--light-brown);
+	font-family: sans-serif;
+	height: 100%;
+	position: relative;
+	width: 100%;
+	-webkit-font-smoothing: antialiased;
+}
 
+/* Form */
 
-
-.div-login {
-	background-color: black;
-	border-radius: 2px;
+form {
+	background-color: var(--white);
+	border-radius: 12px;
+	box-sizing: border-box;
+	display: block;
+	font-family: sans-serif;
 	left: 50%;
-	margin: auto;
-	padding-bottom: 10px;
-	padding-top: 25px;
+	margin: 0;
+	max-width: 400px;
+	padding: 2.25em;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 400px;
-	-ms-transform: translate(-50%, -50%);
+	width: 100%;
 }
 
-.login {
-	background-color: black;
-	border: 0px;
-	height: 360px;
-	width: 400px;
+form .svgContainer {
+	border-radius: 50%;
+	height: 200px;
+	margin: 0 auto 1em;
+	pointer-events: none;
+	position: relative;
+	width: 200px;
 }
 
-.bgred {
-	background-color: red;
-	width: 25px;
+form .svgContainer div {
+	border-radius: 50%;
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 100%;
+	position: relative;
+	width: 100%;
 }
 
-.signlabel {
-	color: #FBFBFB;
-	font-size: 40px;
-	font-weight: bold;
-	padding-left: 25px;
+form .svgContainer .mySVG {
+	height: 100%;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
-/* input[type="text"], input[type="password"] {
-	background-color: black;
-	border: 0px;
-	color: gray;
-	font-size: 15px;
-	padding: 8px;
-	margin-left: 17px;
-} */
+form .svgContainer:after {
+	border: solid 2.5px var(--dark-cyan-blue);
+	border-radius: 50%;
+	box-sizing: border-box;
+	content: "";
+	height: inherit;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: inherit;
+	z-index: 10;
+}
 
-.btnsignin {
-	background-color: red;
-	border: 0px;
-	border-radius: 1px;
-	color: #FBFBFB;
+form .inputGroup {
+	margin: 0 0 2em;
+	padding: 0;
+	position: relative;
+}
+
+form .inputGroup:last-of-type {
+	margin-bottom: 0;
+}
+
+form label {
+	color: var(--dark-cyan-blue);
+	display: block;
+	font-family: inherit;
+	font-weight: 700;
+	margin: 0 0 12px;
+}
+
+form input[type='email'], 
+form input[type='text'],
+form input[type="password"] {
+	background-color: var(--light-cyan);
+	border: solid 2px var(--dark-cyan-blue);
+	border-radius: 25px;
+	box-sizing: border-box;
+	color: var(--dark-cyan-blue);
+	display: block;
+	font-family: inherit;
+	font-weight: 600;
+	height: 50px;
+	margin: 0;
+	transition: box-shadow 0.2s linear, border-color 0.25s ease-out;
+	width: 100%;
+	-webkit-appearance: none;
+}
+
+form input[type='email']:focus, 
+form input[type='text']:focus,
+form input[type="password"]:focus {
+	border: solid 2px var(--dark-cyan-blue);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, .1);
+	outline: none;
+}
+
+.icon {
+	color: var(--dark-cyan-blue);
+	left: 25px;
+	position: absolute;
+	top: 45px;
+}
+
+form button {
+	background-color: var(--dark-cyan-blue);
+	border: none;
+	border-radius: 25px;
+	box-shadow: none;
+	box-sizing: border-box;
+	color: var(--white);
 	cursor: pointer;
-	font-weight: bold;
-	height: 55px;
-	width: 94%;
+	display: block;
+	font-family: inherit;
+	font-weight: 600;
+	height: 50px;
+	margin: 0;
+	transition: background-color 0.2s ease-out;
+	width: 100%;
 }
 
-.gray {
-	color: gray;
+form button:hover, form button:active {
+	background-color: var(--dark-cyan-blue);
+}
+
+form .inputGroup1 input[type="email"],
+form input[type='text'],
+form .inputGroup2 input[type="password"] {
+	padding-left: 3.2em;
+}
+
+form .inputGroup2 #showPasswordToggle {
+	display: block;
 	font-size: 15px;
+	padding: 0 0 0 1.45em;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
-.red {
-	color: red;
+form .inputGroup2 #showPasswordToggle input {
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
 }
 
-@media (max-width:600px) {
-	.divlogin {
-		width: 95%;
-	}
+form .inputGroup2 #showPasswordToggle .indicator {
+	background-color: var(--light-cyan);
+	border: solid 2px var(--dark-cyan-blue);
+	border-radius: 3px;
+	left: 0;
+	height: 0.85em;
+	position: absolute;
+	top: 0;
+	width: 0.85em;
+}
 
-	.login {
-		width: 100%;
-	}
+form .inputGroup2 #showPasswordToggle .indicator:after {
+	border: solid var(--dark-cyan-blue);
+	border-width: 0 3px 3px 0;
+	content: "";
+	height: 0.5em;
+	left: 0.25em;
+	position: absolute;
+	top: 0.025em;
+	transform: rotate(45deg);
+	visibility: hidden;
+	width: 0.2em;
+}
+
+form .inputGroup2 #showPasswordToggle input:checked ~ .indicator:after {
+	visibility: visible;
+}
+
+form .inputGroup2 #showPasswordToggle input:focus ~ .indicator, 
+form .inputGroup2 #showPasswordToggle input:hover ~ .indicator {
+	border-color: var(--dark-cyan-blue);
+}
+
+form .inputGroup2 #showPasswordToggle input:disabled ~ .indicator {
+	opacity: 0.5;
+}
+
+form .inputGroup2 #showPasswordToggle input:disabled ~ .indicator:after {
+	visibility: hidden;
+}
+
+.bottom {
+	display: flex;
+	padding-bottom: 10px;
+	margin-top: 30px;
+	flex-direction: row;
+}
+
+.bottom p:nth-child(1) {
+	color: var(--gray);
+	cursor: pointer;
+	font-size: 15px;
+	width: 50%;
+}
+
+.bottom p:nth-child(2) {
+	color: var(--dark-cyan-blue);
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: right;
+	width: 50%;
 }
