@@ -4,12 +4,6 @@ Login page
 
 <br>
 
-## Additional Context
-
-Web Systems and Technologies | 03 Hands-on Activity 1 - ARG
-
-<br>
-
 ## Screenshot
 
 ![image1](https://user-images.githubusercontent.com/84888155/140286380-748115fd-7f31-4a14-ac01-cd02bbe3145f.PNG)
